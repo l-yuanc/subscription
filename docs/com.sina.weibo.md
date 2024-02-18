@@ -2,11 +2,6 @@
 
 存在 16 规则组 - [com.sina.weibo](/src/apps/com.sina.weibo.ts)
 
-## 开屏广告
-
-- [快照-0](https://i.gkd.li/import/12782355)
-- [快照-1](https://i.gkd.li/import/13194049)
-
 ## 兴趣领域推荐
 
 默认禁用 - 出现在长久未登录的账户再次登录时
@@ -27,6 +22,7 @@
 - [快照-0](https://i.gkd.li/import/12673043)
 - [快照-1](https://i.gkd.li/import/13635551)
 - [快照-2](https://i.gkd.li/import/12673051)
+- [快照-3](https://i.gkd.li/import/13787207)
 
 ## 评论区博主内容推荐
 
@@ -97,14 +93,21 @@
 
 - [快照-0](https://i.gkd.li/import/13482960)
 
-## 评论区-信息流广告
+## 分段广告-评论区信息流广告
 
-默认禁用 - 点击【x】
+默认禁用 - 点击X-点击不感兴趣
 
-- [快照-0](https://i.gkd.li/import/13632175)
+- [快照-0](https://i.gkd.li/import/13852321)
+- [快照-1](https://i.gkd.li/import/13852322)
 
 ## APP评分弹窗
 
 默认禁用 - 点击【x】
 
 - [快照-0](https://i.gkd.li/import/13620220)
+
+## 功能类-自动点击查看原图
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/import/13929119)

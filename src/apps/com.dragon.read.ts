@@ -3,22 +3,8 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.dragon.read',
   name: '番茄免费小说',
-  deprecatedKeys: [11],
+  deprecatedKeys: [-1, 11],
   groups: [
-    {
-      key: -1,
-      name: '开屏广告',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      quickFind: true,
-      rules: [
-        {
-          matches: '[text="跳过广告"]',
-          snapshotUrls: 'https://i.gkd.li/import/13210844',
-        },
-      ],
-    },
     {
       key: 0,
       name: '卡片式广告',
@@ -121,7 +107,7 @@ export default defineAppConfig({
     },
     {
       key: 5,
-      name: '广告弹窗',
+      name: '分段广告',
       quickFind: true,
       rules: [
         {
@@ -129,8 +115,11 @@ export default defineAppConfig({
           name: '阅读页面广告弹窗-点击反馈按钮',
           activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
           // 有反馈原规则'[text="反馈"][clickable=true]'不触发删除[clickable=true]才能点击；有反馈原规则点击屏外节点，导致无法执行下一步，遂添加[visibleToUser=true]
-          matches: 'FlattenUIText[text="反馈"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/import/13520160',
+          matches: '[text="反馈"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13520160',
+            'https://i.gkd.li/import/13843155',
+          ],
         },
         {
           preKeys: 0,
@@ -150,6 +139,21 @@ export default defineAppConfig({
           matches:
             '[id="com.dragon.read:id/readFlowNonRoundEntranceLayout"] [id="com.dragon.read:id/relativeRight"]',
           snapshotUrls: 'https://i.gkd.li/import/13674556',
+        },
+        {
+          key: 3,
+          name: '阅读页面广告弹窗-点击反馈',
+          activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
+          matches: '[text="看视频免广告"] - [text="反馈"]',
+          snapshotUrls: 'https://i.gkd.li/import/13816453',
+        },
+        {
+          preKeys: 3,
+          key: 4,
+          name: '阅读页面广告弹窗-点击不感兴趣',
+          activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
+          matches: '[text="举报"] <2 ViewGroup - ViewGroup[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13816454',
         },
       ],
     },
